@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="cstyle.css" type="text/css">
+</head>
+
+<body class="container">
+    <h1>Calculator</h1>
+    <hr>
+    <h3>Four Operation calulator</h3>
+    <p>Input values and operator are:</p>
+    <div id="coef"></div>
+    <p>ANSWER IS:</p>
+    <div id="ans"></div>
+    <div id="particles-js">
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.json',
+                function () {
+                    console.log("Particles loaded!")
+                });
+
+        </script>
+         <form>
+            <label for="input1">Input:</label>
+            <input id="input1" type="number" placeholder="Enter"
+                oninput="calculate(array(input1.value,input2.value,input3.value));"><br>
+            <label for="input2">Input:</label>
+            <input id="input2" type="number" placeholder="Enter"
+                oninput="calculate(array(input1.value,input2.value,input3.value));"><br>
+            <label for="input3">Input:</label>
+            <select id="input3" oninput="calculate(array(input1.value,input2.value,input3.value))">
+                <option disabled>Select one operator</option>
+                <option>+</option>
+                <option>-</option>
+                <option>/</option>
+                <option>*</option>
+            </select>
+        </form>
+        <button class="btn btn-success" onclick="setcoef();">Reset</button>
+    </div>
+</body>
+
+</html>
